@@ -70,6 +70,10 @@ int main(int argc, char **argv)
                 error_only = true;
                 found = true;
                 break;
+            case 'u':
+                dui.skipIncludes = true;
+                found = true;
+                break;
             }
             if (!found) {
                 std::cout << "error: option '" << arg << "' is unknown." << std::endl;

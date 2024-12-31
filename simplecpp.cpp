@@ -3484,7 +3484,7 @@ void simplecpp::preprocess(simplecpp::TokenList &output, const simplecpp::TokenL
                     output.clear();
                     return;
                 }
-            } else if (ifstates.top() == True && rawtok->str() == INCLUDE) {
+            } else if (ifstates.top() == True && rawtok->str() == INCLUDE && !dui.skipIncludes) {
                 TokenList inc1(files);
                 for (const Token *inctok = rawtok->next; sameline(rawtok,inctok); inctok = inctok->next) {
                     if (!inctok->comment)

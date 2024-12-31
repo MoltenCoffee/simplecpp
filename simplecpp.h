@@ -345,6 +345,7 @@ namespace simplecpp {
         std::string std;
         bool clearIncludeCache;
         bool removeComments; /** remove comment tokens from included files */
+        bool skipIncludes; /** skip #include directives */
     };
 
     SIMPLECPP_LIB long long characterLiteralToLL(const std::string& str);
